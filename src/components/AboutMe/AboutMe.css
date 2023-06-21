@@ -1,0 +1,146 @@
+.about {
+  max-width: 1140px;
+  margin: auto;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  padding: 110px 0 100px;
+
+}
+
+.about__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.about__content {
+  max-width: 600px;
+}
+
+.about__title {
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: #000000;
+  border-bottom: 1px solid;
+  min-width: 100%;
+  padding-bottom: 23px;
+  margin: 0;
+}
+
+.about__name {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 116%;
+  letter-spacing: -0.04em;
+  color: #000000;
+  padding: 66px 0 18px;
+  margin: 0;
+}
+
+.about__profile {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 111%;
+  color: #000000;
+  mix-blend-mode: normal;
+  margin: 0;
+}
+
+.about__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 157%;
+  color: #000000;
+  mix-blend-mode: normal;
+  margin: 0;
+  padding: 26px 0 99px;
+}
+
+.about__url {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}
+
+.about__photo {
+  margin: 66px 0 0;
+}
+
+@media screen and (max-width: 1279px) {
+  .about {
+    max-width: 668px;
+    padding: 85px 0 90px;
+  }
+
+  .about__content {
+    max-width: 364px;
+  }
+
+  .about__name {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100%;
+  }
+
+  .about__profile {
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  .about__description {
+    font-size: 12px;
+    line-height: 150%;
+    padding: 20px 0 87px;
+  }
+
+  .about__photo {
+    max-width: 255px;
+  }
+}
+
+@media screen and (max-width: 757px) {
+  .about {
+    max-width: 292px;
+    padding: 80px 0 70px;
+  }
+
+  .about__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .about__container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about__photo {
+    min-width: 290px;
+  }
+
+  .about__name {
+    font-size: 30px;
+    line-height: 36px;
+    padding: 40px 0 20px;
+  }
+
+  .about__profile {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .about__description {
+    font-size: 11px;
+    line-height: 145%;
+    padding-bottom: 40px;
+  }
+
+  .about__url {
+    font-size: 14px;
+    line-height: 17px;
+  }  
+}

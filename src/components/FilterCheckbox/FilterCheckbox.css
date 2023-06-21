@@ -1,0 +1,38 @@
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filter__title {
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 138%;
+  color: #000000;
+  padding: 0 14px 0 21px;
+  margin: 0;
+}
+
+.filter__checkbox {
+  width: 36px;
+  height: 20px;
+  background-image: url('../../images/smalltumboff_disable.svg');
+}
+
+.filter__checkbox_active {
+  background-image: url('../../images/smalltumb.svg');
+}
+
+.filter__checkbox:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1279px) {
+  .filter {
+    max-width: 768px;
+    padding-top: 45px;
+    margin: auto;
+  }
+}
