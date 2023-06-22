@@ -1,4 +1,3 @@
-import './SavedMovies.css';
 import SearchForm from '../SearchForm/SearchForm';
 import MoviesCardList from '../MoviesCardList/MoviesCardList'
 import { InitialMovies } from '../../utils/InitialMovies';

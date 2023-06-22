@@ -31,7 +31,6 @@
 .profile__form-element:last-of-type {
   border-bottom: none;
   padding: 17px 0 220px;
-
 }
 
 .profile__form-label {
@@ -78,5 +77,34 @@
   text-decoration: none;
   justify-content: center;
   padding: 16px 0 70px;
+}
 
+@media screen and (max-width: 1279px) {
+  .profile__title {
+    padding: 230px 0 96px;
+  }
+
+  .profile__form-element:last-of-type {
+    border-bottom: none;
+    padding: 17px 0 200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile__title {
+    padding: 70px 0 75px;
+  }
+
+  .profile__form {
+    max-width: 260px;
+  }
+
+  .profile__form-element {
+    min-width: 260px;
+  }
+
+  .profile__form-element:last-of-type {
+    border-bottom: none;
+    padding: 17px 0 375px;
+  }
 }

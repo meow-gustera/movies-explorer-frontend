@@ -59,11 +59,9 @@
   .header__navigation {
     display: none;
   }
-
 }
 
-
-@media screen and (max-width: 728px) {
+@media screen and (max-width: 767px) {
   .header__profile-link_signin {
     min-width: 54px;
     min-height: 26px;

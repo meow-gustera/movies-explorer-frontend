@@ -43,7 +43,7 @@
   }
 }
 
-@media all and (max-width:728px) {
+@media all and (max-width:767px) {
   .footer {
     max-width: 300px;
   }

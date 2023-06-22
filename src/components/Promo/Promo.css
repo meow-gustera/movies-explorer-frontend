@@ -35,7 +35,7 @@
   }
 }
 
-@media screen and (max-width: 757px) {
+@media screen and (max-width: 767px) {
   .promo {
     max-width: 300px;
     min-height: 586px;

@@ -28,6 +28,7 @@ function Navigation() {
     )
   }
 
+
   const renderLoggedPage = () => {
     return (
       <>
@@ -37,8 +38,6 @@ function Navigation() {
         </nav>
 
         <nav className="header__navigation">
-
-
           <div className="header__navigation-links">
             <Link className="header__navigation-link" to="/movies">Фильмы</Link>
             <Link className="header__navigation-link" to="/saved-movies">Сохранённые фильмы</Link>
