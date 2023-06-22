@@ -25,6 +25,10 @@
   padding-left: 16px;
 }
 
+.header__navigation-link:hover {
+  opacity: 0.7;
+}
+
 .header__navigation-links {
   display: flex;
   align-items: center;
