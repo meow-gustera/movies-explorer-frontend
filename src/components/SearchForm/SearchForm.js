@@ -8,8 +8,8 @@ function SearchForm() {
 
   return (
     <div className="search-bar">
-      <form className="search-form" >
-        <input type="text" className="search-form__input" placeholder="Фильм" name="searchFilm" onSubmit={handleSubmit} />
+      <form className="search-form"onSubmit={handleSubmit} >
+        <input type="text" className="search-form__input" placeholder="Фильм" name="searchFilm" required/>
         <button className="search-form__button" type="button" aria-label="Поиск фильма" />
       </form>
       <FilterCheckbox />

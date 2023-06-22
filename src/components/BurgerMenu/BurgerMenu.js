@@ -6,7 +6,7 @@ import profile from '../../images/profile.svg';
 function BurgerMenu({ isOpen, onClose }) {
   return (
     <div className={`menu ${isOpen ? "" : 'menu_closed'}`}>
-      <button className="menu menu__close-button" onClick={onClose} ></button>
+      <button className="menu__close-button" onClick={onClose} ></button>
       <nav className="menu__links">
         <NavLink className="menu__link" to="/" onClick={onClose}>Главная</NavLink>
         <NavLink className="menu__link" to="/movies" onClick={onClose}>Фильмы</NavLink>

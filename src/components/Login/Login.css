@@ -68,3 +68,49 @@
   text-align: center;
   color: #3456F3;
 }
+
+@media screen and (max-width: 1279px) {
+  .login__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    padding-bottom: 20px;
+  }
+
+  .login__form-submit {
+    margin-top: 90px;
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login {
+    max-width: 320px;
+  }
+
+  .login__title {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    padding-bottom: 60px;
+    text-align: center;
+
+  }
+
+  .login__form-input {
+    min-width: 260px;
+    font-size: 13px;
+    line-height: 16px;
+    margin: auto;
+  }
+
+  .login__form-label {
+    padding-left: 30px;
+    padding-bottom: 10px;
+  }
+
+  .login__form-submit {
+    min-width: 260px;
+    margin: 175px 30px 14px;
+  }
+}

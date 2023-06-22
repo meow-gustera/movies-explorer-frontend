@@ -34,5 +34,11 @@
     max-width: 768px;
     padding-top: 45px;
     margin: auto;
+    font-size: 11px;
+    line-height: 164%;
+  }
+
+  .filter__title {
+    padding-left: 0;
   }
 }

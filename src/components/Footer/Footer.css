@@ -74,6 +74,7 @@
 
   .footer__nav-link {
     padding-bottom: 12px;
+    padding-left: 0;
   }
  
 }

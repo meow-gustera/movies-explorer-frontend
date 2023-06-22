@@ -6,9 +6,10 @@ import Navigation from '../Navigation/Navigation';
 function Header() {
   const { pathname } = useLocation();
   const loggedUrls = pathname === "/movies" || pathname === "/saved-movies" || pathname === "/profile" || pathname === "/"
+  const authUrl =  pathname === "/signup" || pathname === "/signin"
 
   return (
-    <header className="header">
+    <header className={`header ${authUrl ? "header_auth" : ""}`}>
       <Link to="/"><img className="header__logo header__logo_main" src={logo} alt="Logo" /></Link>
       {loggedUrls ? <Navigation /> : null}
     </header>

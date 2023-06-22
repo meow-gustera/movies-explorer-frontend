@@ -123,3 +123,30 @@
     left: 253px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .movie-item {
+    max-width: 300px;
+    padding: 0 0 39px;
+  }
+
+  .movie-item__image {
+    max-width: 300px;
+  }
+
+  .movie-item:nth-child(3n) {
+    padding: 0;
+  }
+
+  .movie-item__check-mark {
+    left: 269px;
+  }
+  
+  .movie-item__saved-delete  {
+    left: 269px;
+  }
+
+  .movie-item__save-mark {
+    left: 218px;
+  }
+}

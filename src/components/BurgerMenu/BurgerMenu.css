@@ -1,6 +1,5 @@
 .menu {
   display: flex;
-
   position: fixed;
   top: 0;
   bottom: 0;
@@ -19,12 +18,15 @@
 
 .menu__close-button {
   background-image: url(../../images/closeMenu.svg);
+  position: fixed;
   top: 30px;
   right: 30px;
   background-position: center;
-  max-width: 22px;
+  width: 22px;
   height: 22px;
   border: none;
+  background-color: #FAFAFA;
+
 }
 
 .menu__links {

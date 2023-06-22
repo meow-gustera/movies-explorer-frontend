@@ -32,10 +32,26 @@
     padding: 115px 0 7px;
   }
 
-  .movies__list {
-    
+  .movies__list {    
     margin: auto;
     padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .movies__list {    
+    padding-left: 0;
+    margin: auto;
+
+  }
+
+  .movies__list-item {
+    padding: 70px 0 16px;
+    max-width: 300px;
+  }
+
+  .movies__list-button {
+    min-width: 240px;
 
   }
 }
