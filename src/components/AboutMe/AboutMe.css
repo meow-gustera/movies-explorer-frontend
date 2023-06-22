@@ -66,6 +66,11 @@
   color: #000000;
 }
 
+.about__url:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .about__photo {
   margin: 66px 0 0;
 }

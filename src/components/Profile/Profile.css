@@ -67,6 +67,10 @@
   cursor: pointer;
 }
 
+.profile__form-submit:hover {
+  opacity: 0.7;
+}
+
 .profile__sing-out {
   display: flex;
   font-weight: 500;
@@ -77,6 +81,10 @@
   text-decoration: none;
   justify-content: center;
   padding: 16px 0 70px;
+}
+
+.profile__sing-out:hover {
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 1279px) {

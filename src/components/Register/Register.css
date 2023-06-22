@@ -52,6 +52,11 @@
   cursor: pointer;
 }
 
+.register__form-submit:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .register__footer {
   font-weight: 400;
   font-size: 14px;
@@ -68,6 +73,10 @@
   line-height: 17px;
   text-align: center;
   color: #3456F3;
+}
+.register__footer-link:hover {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .register__form-input-span-error-active {

@@ -33,7 +33,7 @@ function Navigation() {
     return (
       <>
         <nav className="header__navigation-menu">
-          <img className="header__nav-menu header__nav-menu" src={menu} alt="Меню" onClick={openMenu} />
+          <img className="header__nav-menu header__nav-menu_button" src={menu} alt="Меню" onClick={openMenu} />
           <BurgerMenu isOpen={isMenuOpen} onClose={closeMenu} />
         </nav>
 

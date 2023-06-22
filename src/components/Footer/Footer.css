@@ -37,6 +37,11 @@
   color: #000000;
 }
 
+.footer__nav-link:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 @media all and (max-width:1279px) {
   .footer {
     max-width: 708px;

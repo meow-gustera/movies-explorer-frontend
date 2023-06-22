@@ -10,7 +10,7 @@ function SearchForm() {
     <div className="search-bar">
       <form className="search-form"onSubmit={handleSubmit} >
         <input type="text" className="search-form__input" placeholder="Фильм" name="searchFilm" required/>
-        <button className="search-form__button" type="button" aria-label="Поиск фильма" />
+        <button className="search-form__button" type="submit" aria-label="Поиск фильма" />
       </form>
       <FilterCheckbox />
     </div>
