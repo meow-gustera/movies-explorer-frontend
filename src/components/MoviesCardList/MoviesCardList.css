@@ -30,6 +30,7 @@
 @media screen and (max-width: 1279px) {
   .movies__list-item {
     padding: 115px 0 7px;
+    
   }
 
   .movies__list {    
@@ -52,6 +53,5 @@
 
   .movies__list-button {
     min-width: 240px;
-
   }
 }
