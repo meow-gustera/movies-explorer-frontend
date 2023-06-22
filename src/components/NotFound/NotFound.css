@@ -38,3 +38,22 @@
   background: none;
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .error404__title {
+    font-size: 80px;
+    line-height: 97px;
+    padding: 329px 0 10px;
+  }
+
+  .error404__description {
+    font-size: 12px;
+    line-height: 15px;
+    padding: 0 0 284px;
+  }
+
+  .error404__button-back {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}

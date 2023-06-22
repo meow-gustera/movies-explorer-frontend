@@ -29,8 +29,7 @@
 
 @media screen and (max-width: 1279px) {
   .movies__list-item {
-    padding: 115px 0 7px;
-    
+    padding: 115px 0 7px;    
   }
 
   .movies__list {    
@@ -43,7 +42,6 @@
   .movies__list {    
     padding-left: 0;
     margin: auto;
-
   }
 
   .movies__list-item {
