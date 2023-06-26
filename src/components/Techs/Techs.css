@@ -1,0 +1,133 @@
+.techs {
+  max-width: 1140px;
+  margin: auto;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  padding: 90px 0 80px;
+}
+
+.techs__point {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 116%;
+  margin: 0;
+  text-align: center;
+  letter-spacing: -0.04em;
+  padding: 75px 0 26px;
+  color: #000000;
+}
+
+.techs__title {
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: #000000;
+  border-bottom: 1px solid;
+  min-width: 100%;
+  padding-bottom: 23px;
+}
+
+
+.techs__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin: auto;
+  padding: 0;
+  max-width: 460px;
+}
+
+.techs__items {
+  list-style-type: none;
+  display: flex;
+  padding: 85px 0 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.techs__item {
+  text-decoration: none;
+  background: #E8E8E8;
+  border-radius: 10px;
+  min-height: 60px;
+  min-width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: -0.04em;
+  color: #000000;
+  margin-right: 10px;
+}
+
+
+@media screen and (max-width: 1279px) and (max-width: 1279px) {
+  .techs {
+    max-width: 668px;
+    padding: 90px 0 80px;
+  }
+
+  .techs__point {
+    padding: 60px 0 22px;
+  }
+
+  .techs__description {
+    font-size: 12px;
+    line-height: 150%;
+  }
+
+  .techs__items {
+    padding-top: 65px;
+  }
+
+  .techs__item {
+    min-width: 84px;
+    min-height: 57px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .techs {
+    max-width: 284px;
+    padding: 50px 0 60px;
+  }
+
+  .techs__title {
+    font-size: 18px;
+    line-height: 22px;
+    padding-bottom: 28px;
+  }
+
+  .techs__point {
+    font-size: 30px;
+    line-height: 36px;
+    padding: 45px 0 24px;
+  }
+
+  .techs__description {
+    font-size: 11px;
+    line-height: 145%;
+  }
+
+  .techs__items {
+    flex-wrap: wrap;
+    padding-top: 40px;
+    max-width: 190px;
+    margin: auto;
+    justify-content: flex-start;
+  }
+
+  .techs__item {
+    margin-top: 10px;
+  }
+
+}

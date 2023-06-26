@@ -1,0 +1,38 @@
+.header {
+  max-width: 1146px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px auto 40px;
+}
+
+.header_auth {
+  max-width: 400px;
+  margin: 70px auto 30px;
+}
+
+
+@media screen and (max-width: 1279px) {
+  .header {
+    max-width: 718px;
+    margin-bottom: 18px;
+  }
+
+  .header_auth {
+    max-width: 396px;
+    margin: 232px auto 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    max-width: 300px;
+    margin: 12px auto 18px;
+  }
+
+  .header_auth {
+    max-width: 300px;
+    margin: 56px auto 40px;
+    justify-content: center;
+  }
+}
