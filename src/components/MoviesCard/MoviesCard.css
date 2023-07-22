@@ -2,12 +2,28 @@
   padding-right: 30px;
   padding-bottom: 45px;
   list-style-type: none;
-  max-width: 360px;
   font-family: 'Inter', 'Arial', sans-serif;
   font-style: normal;
   position: relative;
   cursor: pointer;
   max-height: 245px;
+}
+
+.movie-item__trailer-link {
+  text-decoration: none;
+  padding-right: 30px;
+  padding-bottom: 45px;
+  width: 360px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  position: relative;
+  cursor: pointer;
+}
+
+.movie-item__image {
+  width: 360px;
+  height: 201px;
+  object-fit: cover;
 }
 
 .movie-item:nth-child(3n) {
@@ -25,7 +41,7 @@
   font-size: 13px;
   line-height: 16px;
   color: #000000;
-  max-width: 250px;
+  max-width: 240px;
   padding-left: 15px;
 }
 
@@ -47,6 +63,10 @@
   position: absolute;
   top: 14px;
   left: 325px;
+}
+
+.movie-item__check-mark:hover {
+  cursor: pointer;
 }
 
 .movie-item__save-mark {
@@ -94,12 +114,12 @@
 @media screen and (max-width: 1279px) {
   .movie-item {
     padding-right: 30px;
-    max-width: 339px;
+    width: 339px;
   }
 
   .movie-item:nth-child(3n) {
     padding-right: 30px;
-    max-width: 339px;
+    width: 339px;
   }
 
   .movie-item:nth-child(2n) {
@@ -107,7 +127,7 @@
   }
 
   .movie-item__image {
-    max-width: 339px;
+    width: 339px;
   }
 
   .movie-item__check-mark {
@@ -116,7 +136,6 @@
   
   .movie-item__saved-delete  {
     left: 304px;
-
   }
 
   .movie-item__save-mark {
@@ -126,16 +145,16 @@
 
 @media screen and (max-width: 767px) {
   .movie-item {
-    max-width: 300px;
+    width: 300px;
     padding: 0 0 39px;
   }
 
   .movie-item__image {
-    max-width: 300px;
+    width: 300px;
   }
 
   .movie-item:nth-child(3n) {
-    padding: 0;
+    padding: 0 0 39px;
   }
 
   .movie-item__check-mark {

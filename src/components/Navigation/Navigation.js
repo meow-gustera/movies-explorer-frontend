@@ -1,13 +1,11 @@
 import './Navigation.css';
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import profile from '../../images/profile.svg';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import menu from '../../images/burgermenu.svg';
 import { useState } from 'react';
 
-
-function Navigation() {
-  const { pathname } = useLocation();
+function Navigation({loggedIn}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function openMenu() {
@@ -17,8 +15,6 @@ function Navigation() {
     setIsMenuOpen(false);
   }
 
-  const mainPage = pathname === "/";
-
   const renderMainPage = () => {
     return (
       <nav className="header__profile">
@@ -27,7 +23,6 @@ function Navigation() {
       </nav>
     )
   }
-
 
   const renderLoggedPage = () => {
     return (
@@ -48,10 +43,8 @@ function Navigation() {
     )
   }
 
-
-
   return (
-    mainPage ? renderMainPage() : renderLoggedPage()
+    !loggedIn ? renderMainPage() : renderLoggedPage()
   )
 };
 
