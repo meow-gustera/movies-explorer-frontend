@@ -23,41 +23,52 @@ function App() {
   const [currentUser, setUserInfo] = useState({});
   const [loggedIn, setLoggedIn] = useState(false);
   const [statusMessage, setStatusMessage] = useState(' ');
+  const [isLoading, setIsLoading] = useState(false);
+
+  function errCheck(err) {
+    if (err === null) {
+      err.json()
+        .then((res) => {
+          setStatusMessage(res.message)
+        })
+    } else {
+      setStatusMessage('Ошибка соединения');
+    }
+  }
 
   function signUp(name, password, email) {
-    console.log('+')
     mainApi.signUp(name, password, email)
-
       .then((res) => {
         signIn(password, email);
         console.log(res)
         setStatusMessage('Вы зарегистрированы')
       })
       .catch((err) => {
-        err.json()
-          .then((res) => {
-            //Передает message с бэкенда
-            setStatusMessage(res.message)
-          })
+        errCheck(err);
       })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }
 
   function signIn(password, email) {
     mainApi.signIn(password, email)
       .then(() => {
         mainApi.getAuth();
+        console.log(isLoading)
       })
       .then((user) => {
         setUserInfo(user);
         setLoggedIn(true);
+        console.log(isLoading);
 
       })
       .catch((err) => {
-        err.json()
-          .then((res) => {
-            setStatusMessage(res.message)
-          })
+        errCheck(err);
       })
+      .finally(() => {
+        setIsLoading(false);
+      });
   }
 
   function signOut() {
@@ -76,15 +87,16 @@ function App() {
     mainApi.editProfile(user.name, user.email)
       .then((user) => {
         setUserInfo(user);
+        console.log(isLoading)
         setStatusMessage('Данные успешно обновлены')
       })
       .catch((err) => {
-        err.json()
-          .then((res) => {
-            setStatusMessage(res.message)
-          })
-      }
-      )
+        errCheck(err);
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+
   }
 
   useEffect(() => {
@@ -103,7 +115,6 @@ function App() {
         console.log(err);
         console.log(loggedIn);
       })
-
   }, [loggedIn]);
 
   useEffect(() => {
@@ -140,6 +151,8 @@ function App() {
                 updateUserData={updateUserData}
                 loggedIn={loggedIn}
                 statusMessage={statusMessage}
+                isLoading={isLoading}
+                setIsLoading={setIsLoading}
               />}
             />
 
@@ -155,7 +168,7 @@ function App() {
                 : < Register signUp={signUp} statusMessage={statusMessage} />}
             />
 
-            <Route path="/*" element={< NotFound />} />
+            <Route path="/*" element={< NotFound loggedIn={loggedIn} navigate={navigate} />} />
           </Routes>
         </main>
         {pathname === "/" || pathname === "/movies" || pathname === "/saved-movies" ? (

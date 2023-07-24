@@ -1,12 +1,13 @@
 import './Navigation.css';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import profile from '../../images/profile.svg';
 import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import menu from '../../images/burgermenu.svg';
 import { useState } from 'react';
 
-function Navigation({loggedIn}) {
+function Navigation({ loggedIn }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
   function openMenu() {
     setIsMenuOpen(true);
@@ -34,8 +35,11 @@ function Navigation({loggedIn}) {
 
         <nav className="header__navigation">
           <div className="header__navigation-links">
-            <Link className="header__navigation-link" to="/movies">Фильмы</Link>
-            <Link className="header__navigation-link" to="/saved-movies">Сохранённые фильмы</Link>
+
+            <Link className={`header__navigation-link ${pathname === '/movies' && 'header__navigation-link_active'}`}
+              to="/movies">Фильмы</Link>
+            <Link className={`header__navigation-link ${pathname === '/saved-movies' && 'header__navigation-link_active'}`}
+              to="/saved-movies">Сохранённые фильмы</Link>
           </div>
           <Link to="/profile"><img className="header__profile" src={profile} alt="Переход в аккаунт" /></Link>
         </nav>

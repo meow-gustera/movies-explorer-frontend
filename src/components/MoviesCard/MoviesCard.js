@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 function MoviesCard({ movie, userMoviesList, handleDeleteMovie, handleAddMovie, savedPage }) {
   const { nameRU, duration, image, trailerLink } = movie;
   const [isSaved, setIsSaved] = useState(false);
-  const [id, setId] = useState('')
+  const [id, setId] = useState('');
 
   function minutesToHours(duration) {
     const hours = Math.round(duration / 60);
@@ -39,7 +39,7 @@ function MoviesCard({ movie, userMoviesList, handleDeleteMovie, handleAddMovie, 
       {
         savedPage
           ? <button className="movie-item__saved-delete"
-            type="button "
+            type="button"
             aria-label="Удаление фильма из сохраненных"
             onClick={() => handleDeleteMovie(movie._id)} />
           : (

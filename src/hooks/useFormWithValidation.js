@@ -24,7 +24,7 @@ export function useFormWithValidation() {
     setValues({ ...values, [name]: value });
     setErrors({
       ...errors,
-      [name]:  isValidEmail ? '' : target.validationMessage,
+      [name]: isValidEmail ? '' : target.validationMessage,
     });
     setIsValid(target.closest("form").checkValidity());
   };

@@ -8,12 +8,12 @@
   justify-content: space-between;
   align-items: center;
   z-index: 1;
-  flex-direction: column;  
+  flex-direction: column;
   width: 520px;
 }
 
 .menu_closed {
-  display: none;  
+  display: none;
 }
 
 .menu__close-button {
@@ -44,14 +44,15 @@
   padding: 0 0 28px;
 }
 
+.menu__link_active {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
 .menu__profile {
   cursor: pointer;
   padding: 0 0 50px;
   text-decoration: none;
-}
-
-.menu__link:hover {
-  text-decoration: underline;
 }
 
 .menu__close-button:hover {

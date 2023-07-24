@@ -10,8 +10,8 @@ function SavedMovies() {
     handleSetStatusCheckbox,
     statusCheckbox,
     isLoading,
-    checkedStatusCheckbox,
-    searchedStatusStorage,
+    // checkedStatusCheckbox,
+    // searchedStatusStorage,
     MoviesListVisible
   } = useUserMovies();
 
@@ -22,8 +22,6 @@ function SavedMovies() {
         handleSetStatusCheckbox={handleSetStatusCheckbox}
         handleSetSearch={handleSetSearch}
         statusCheckbox={statusCheckbox}
-        checkedStatusCheckbox={checkedStatusCheckbox}
-        searchedStatusStorage={searchedStatusStorage}
       />
       <MoviesCardList
         moviesList={MoviesListVisible}

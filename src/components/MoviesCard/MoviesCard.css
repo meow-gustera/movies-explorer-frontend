@@ -11,7 +11,6 @@
 
 .movie-item__trailer-link {
   text-decoration: none;
-  padding-right: 30px;
   padding-bottom: 45px;
   width: 360px;
   font-family: 'Inter', 'Arial', sans-serif;
@@ -34,6 +33,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 360px;
 }
 
 .movie-item__name {
@@ -87,7 +87,7 @@
   cursor: pointer;
 }
 
-.movie-item :hover~.movie-item__save-mark{
+.movie-item :hover~.movie-item__save-mark {
   display: flex;
 }
 
@@ -107,7 +107,7 @@
   display: flex;
 }
 
-.movie-item :hover ~.movie-item__saved-delete{
+.movie-item :hover~.movie-item__saved-delete {
   display: flex;
 }
 
@@ -133,8 +133,8 @@
   .movie-item__check-mark {
     left: 304px;
   }
-  
-  .movie-item__saved-delete  {
+
+  .movie-item__saved-delete {
     left: 304px;
   }
 
@@ -159,13 +159,16 @@
 
   .movie-item__check-mark {
     left: 269px;
+    display: flex;
   }
-  
-  .movie-item__saved-delete  {
+
+  .movie-item__saved-delete {
     left: 269px;
+    display: flex;
   }
 
   .movie-item__save-mark {
     left: 218px;
+    display: flex;
   }
 }

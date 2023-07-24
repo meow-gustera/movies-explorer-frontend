@@ -9,11 +9,8 @@ export function useUserMovies() {
     error: null
   })
 
-  const checkedStatusCheckbox = localStorage.getItem('checkedStatusCheckboxSaved');
-  const [statusCheckbox, setStatusCheckbox] = useState(JSON.parse(checkedStatusCheckbox) || false);
-
-  const searchedStatusStorage = localStorage.getItem('searchedWordSaved');
-  const [search, setSearch] = useState(searchedStatusStorage || '');
+  const [statusCheckbox, setStatusCheckbox] = useState(false);
+  const [search, setSearch] = useState('');
 
   async function handleFetchMovies() {
     try {
@@ -67,18 +64,18 @@ export function useUserMovies() {
       for (let movie of movies) {
         const { nameRU, nameEN, duration } = movie;
         const shortMovie = statusCheckbox && duration <= SHORT_DURATION;
-        const searchedWord = searchedStatusStorage && (nameRU.toLowerCase().includes(searchedStatusStorage.toLowerCase()) || nameEN.toLowerCase().includes(searchedStatusStorage.toLowerCase()));
+        const searchedWord = search && (nameRU.toLowerCase().includes(search.toLowerCase()) || nameEN.toLowerCase().includes(search.toLowerCase()));
 
-        if (searchedStatusStorage && statusCheckbox) {
+        if (search && statusCheckbox) {
           if (searchedWord && shortMovie) {
             resultSearch.push(movie);
           }
-        } else if (searchedStatusStorage && !statusCheckbox) {
+        } else if (search && !statusCheckbox) {
           if (searchedWord) {
             resultSearch.push(movie);
           }
         }
-        if (!searchedStatusStorage && statusCheckbox) {
+        if (!search && statusCheckbox) {
           if (shortMovie) {
             resultSearch.push(movie);
           }
@@ -86,18 +83,15 @@ export function useUserMovies() {
       }
       return resultSearch;
     }
-  }, [checkedStatusCheckbox, searchedStatusStorage, state.movies]);
+  }, [statusCheckbox, search, state.movies]);
 
 
   const handleSetSearch = useCallback((value) => {
     setSearch(value);
-    console.log(value)
-    localStorage.setItem('searchedWordSaved', value);
   }, []);
 
   const handleSetStatusCheckbox = () => {
     setStatusCheckbox(!statusCheckbox);
-    localStorage.setItem('checkedStatusCheckboxSaved', !statusCheckbox);
   };
 
   useEffect(() => {
@@ -113,13 +107,11 @@ export function useUserMovies() {
   return {
     handleSetSearch,
     handleSetStatusCheckbox,
-    checkedStatusCheckbox,
     statusCheckbox,
     isLoading: state.isLoading,
     error: state.error,
     setState,
     state,
-    searchedStatusStorage,
     UserMoviesList: state.movies,
     MoviesListVisible: filteredMoviesList,
     handleAddMovie,

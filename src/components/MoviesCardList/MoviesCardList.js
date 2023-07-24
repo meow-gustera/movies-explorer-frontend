@@ -15,9 +15,8 @@ function MoviesCardList({ isLoading, moviesList, handleAddMovie, handleDeleteMov
         </>
       )
     }
-
     //Передан пустой объект с фильмами - либо ничего не найдено, либо поиска не было
-    else if (moviesList.length === 0) {
+    else if (moviesList.length === 0 && !savedPage) {
       return (
         <>
           {localStorage.getItem('searchedWord') || localStorage.getItem('checkedStatusCheckbox')
@@ -26,7 +25,13 @@ function MoviesCardList({ isLoading, moviesList, handleAddMovie, handleDeleteMov
           }
         </>)
     }
-
+    else if (moviesList.length === 0 && savedPage) {
+      return (
+        <>
+          <p className="movies__error-message">Ничего не найдено.</p>
+        </>
+      )
+    }
     //Во всех остальных случаях ошибка
     else {
       return (
