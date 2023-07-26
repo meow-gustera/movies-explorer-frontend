@@ -2,12 +2,27 @@
   padding-right: 30px;
   padding-bottom: 45px;
   list-style-type: none;
-  max-width: 360px;
   font-family: 'Inter', 'Arial', sans-serif;
   font-style: normal;
   position: relative;
   cursor: pointer;
   max-height: 245px;
+}
+
+.movie-item__trailer-link {
+  text-decoration: none;
+  padding-bottom: 45px;
+  width: 360px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-style: normal;
+  position: relative;
+  cursor: pointer;
+}
+
+.movie-item__image {
+  width: 360px;
+  height: 201px;
+  object-fit: cover;
 }
 
 .movie-item:nth-child(3n) {
@@ -18,6 +33,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 360px;
 }
 
 .movie-item__name {
@@ -25,7 +41,7 @@
   font-size: 13px;
   line-height: 16px;
   color: #000000;
-  max-width: 250px;
+  max-width: 240px;
   padding-left: 15px;
 }
 
@@ -49,6 +65,10 @@
   left: 325px;
 }
 
+.movie-item__check-mark:hover {
+  cursor: pointer;
+}
+
 .movie-item__save-mark {
   background: url('../../images/saved.svg');
   min-width: 80px;
@@ -67,7 +87,7 @@
   cursor: pointer;
 }
 
-.movie-item :hover~.movie-item__save-mark{
+.movie-item :hover~.movie-item__save-mark {
   display: flex;
 }
 
@@ -87,19 +107,19 @@
   display: flex;
 }
 
-.movie-item :hover ~.movie-item__saved-delete{
+.movie-item :hover~.movie-item__saved-delete {
   display: flex;
 }
 
 @media screen and (max-width: 1279px) {
   .movie-item {
     padding-right: 30px;
-    max-width: 339px;
+    width: 339px;
   }
 
   .movie-item:nth-child(3n) {
     padding-right: 30px;
-    max-width: 339px;
+    width: 339px;
   }
 
   .movie-item:nth-child(2n) {
@@ -107,16 +127,15 @@
   }
 
   .movie-item__image {
-    max-width: 339px;
+    width: 339px;
   }
 
   .movie-item__check-mark {
     left: 304px;
   }
-  
-  .movie-item__saved-delete  {
-    left: 304px;
 
+  .movie-item__saved-delete {
+    left: 304px;
   }
 
   .movie-item__save-mark {
@@ -126,27 +145,30 @@
 
 @media screen and (max-width: 767px) {
   .movie-item {
-    max-width: 300px;
+    width: 300px;
     padding: 0 0 39px;
   }
 
   .movie-item__image {
-    max-width: 300px;
+    width: 300px;
   }
 
   .movie-item:nth-child(3n) {
-    padding: 0;
+    padding: 0 0 39px;
   }
 
   .movie-item__check-mark {
     left: 269px;
+    display: flex;
   }
-  
-  .movie-item__saved-delete  {
+
+  .movie-item__saved-delete {
     left: 269px;
+    display: flex;
   }
 
   .movie-item__save-mark {
     left: 218px;
+    display: flex;
   }
 }

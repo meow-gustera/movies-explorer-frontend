@@ -1,21 +1,12 @@
 import MoviesCard from '../MoviesCard/MoviesCard';
 
-function CheckFilter({ filter, moviesList }) {
-  if (filter) {
-    const filterMovieList = moviesList.filter((movie) => movie.isSaved);
-
-    return (
-      filterMovieList.map((movie, i) => (
-        <MoviesCard movie={movie} key={i} filter={true} />
-      ))
-    )
-  } else {
-    return (
-      moviesList.map((movie, i) => (
-        <MoviesCard movie={movie} key={i} filter={false} />
-      ))
-    )
-  }
+function CheckFilter({ moviesList, handleDeleteMovie, userMoviesList, handleAddMovie, savedPage }) {
+  console.log(moviesList)
+  return (
+    moviesList.map((movie) => (
+      <MoviesCard movie={movie} key={movie.id} handleDeleteMovie={handleDeleteMovie} userMoviesList={userMoviesList} handleAddMovie={handleAddMovie} savedPage={savedPage} />
+    ))
+  )
 }
 
 export default CheckFilter;

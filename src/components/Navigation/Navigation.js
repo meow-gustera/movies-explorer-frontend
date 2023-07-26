@@ -5,10 +5,9 @@ import BurgerMenu from '../BurgerMenu/BurgerMenu';
 import menu from '../../images/burgermenu.svg';
 import { useState } from 'react';
 
-
-function Navigation() {
-  const { pathname } = useLocation();
+function Navigation({ loggedIn }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
   function openMenu() {
     setIsMenuOpen(true);
@@ -16,8 +15,6 @@ function Navigation() {
   function closeMenu() {
     setIsMenuOpen(false);
   }
-
-  const mainPage = pathname === "/";
 
   const renderMainPage = () => {
     return (
@@ -27,7 +24,6 @@ function Navigation() {
       </nav>
     )
   }
-
 
   const renderLoggedPage = () => {
     return (
@@ -39,8 +35,11 @@ function Navigation() {
 
         <nav className="header__navigation">
           <div className="header__navigation-links">
-            <Link className="header__navigation-link" to="/movies">Фильмы</Link>
-            <Link className="header__navigation-link" to="/saved-movies">Сохранённые фильмы</Link>
+
+            <Link className={`header__navigation-link ${pathname === '/movies' && 'header__navigation-link_active'}`}
+              to="/movies">Фильмы</Link>
+            <Link className={`header__navigation-link ${pathname === '/saved-movies' && 'header__navigation-link_active'}`}
+              to="/saved-movies">Сохранённые фильмы</Link>
           </div>
           <Link to="/profile"><img className="header__profile" src={profile} alt="Переход в аккаунт" /></Link>
         </nav>
@@ -48,10 +47,8 @@ function Navigation() {
     )
   }
 
-
-
   return (
-    mainPage ? renderMainPage() : renderLoggedPage()
+    !loggedIn ? renderMainPage() : renderLoggedPage()
   )
 };
 
