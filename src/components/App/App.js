@@ -26,7 +26,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(false);
 
   function errCheck(err) {
-    if (err === null) {
+    if (err.status) {
       err.json()
         .then((res) => {
           setStatusMessage(res.message)
